@@ -1,0 +1,75 @@
+body{
+    background-color: #b8b8b8;
+}
+
+
+.mainlightbox{
+    width: 85%;
+    margin: auto;
+    border: solid 2px rgb(116, 116, 116);
+    background-color: #8f8f8f;
+    border-radius: 50px 0 50px 0;
+ 
+    
+}
+.mainlightbox img{
+    border: solid 1px black;
+    /* margin-right: 3%; */
+    margin: 2%;
+    border-radius: 10px;
+}
+
+#greylightbox{
+    background-color: rgba(41, 41, 41,0.8);
+    position: absolute;
+    width: 100%;
+    height: 660px;
+    top: 0px;
+    display: none;
+   margin: auto;
+}
+#greylightbox img{
+    width: 50%;
+   margin-left: 25%;
+    margin-top: 10%;
+    border-radius: 10px;
+    border: solid 2px rgb(29, 29, 29);
+    box-shadow: 5px 5px 10px #292929
+}
+
+#greylightbox p{
+    text-align: center;
+    border: solid 1px #ffffff;
+    border-radius: 10px;
+    width: 10%;
+    height: 5%;
+    margin: auto;
+    font-size: 20px;
+    background-color: #e2cc05;
+    margin-top: 20px;
+
+}
+/* #remov{
+    background-color: rgb(24, 24, 43);
+    color: #ffffff;
+    width: 7%;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1px #ffffff;
+    z-index: 1; */
+/* } */
+/* #divbutton{
+    background-color: aqua;
+width: 60px;
+height: 50px;
+top: -50%;
+position:relative;
+
+} */
+.mystyle {
+  width: 100%;
+  padding: 25px;
+  background-color: coral;
+  color: white;
+  font-size: 25px;
+}

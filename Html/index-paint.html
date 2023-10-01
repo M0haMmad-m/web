@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>paint</title>
+        <link rel="stylesheet" type="text/Css" href="/Css/index-paint.css">
+    </head>
+    <body dir="auto">
+        <canvas class="canvas"></canvas>
+            <div class="controls">
+                <div id="controls-id">
+                    <ul>
+                        <li class="red selected"></li>
+                        <li class="blue"></li>
+                        <li class="magenta"></li>
+                     </ul>
+                </div>
+                <button id="revealColorSelect">رنگ جدید</button>
+                <div id="ColorSelect">
+                    <span id="newColor"></span>
+                    <div id="sliderrs">
+                        <p id="text">
+                            <label for="red">قرمز</label>
+                            <input id="red" name="red" type="range" min="0" max="255" value="0">
+                        </p>
+                        <p id="text">
+                            <label for="green">سبز</label>
+                            <input id="green" name="green" type="range" min="0" max="255" value="0">
+                        </p>
+                        <p id="text">
+                            <label for="blue">ابی</label>
+                            <input id="blue" name="blue" type="range" min="0" max="255" value="0">
+                        </p>
+                    </div>
+                    <div>
+                        <button id="addNewColor">اضافه کردن رنگ </button>
+                    </div>
+                </div>
+            </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/Javascript/index-paint.js"></script>
+</body>
+</html>

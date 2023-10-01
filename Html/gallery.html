@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Css/gallery.css">
+    
+</head>
+<body>
+    
+
+  <div class="mainlightbox">
+    <img src="/img/6.jpg" width="20%" height="7%"  onclick="lightboxfunction(this)" alt="Lamborghini" >
+    <img src="/img/2.jpg" width="20%" height="7%"  onclick="lightboxfunction(this)"  alt=" Painting">
+    <img src="/img/3.jpg" width="20%" height="7%"   onclick="lightboxfunction(this)" alt=" Castle">
+    <img src="/img/4.jpg" width="20%" height="7%"   onclick="lightboxfunction(this)" alt=" Galaxy">
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+var lightbox =$("<div id='greylightbox'></div>");
+var image=$("<img>");
+var caption=("<p></p>");
+
+$("body").append(lightbox);
+$("#greylightbox").append(image);
+$("#greylightbox").append(caption);
+
+    $(".mainlightbox img").click(function() {
+      var imgSrc = $(this).attr("src");
+      var imgAlt = $(this).attr("alt");
+      
+      $("#greylightbox img").attr("src", imgSrc);
+      $("#greylightbox p").text(imgAlt);
+      $("#greylightbox").show();
+    });
+
+    $("#greylightbox").click(function() {
+      $(this).hide();
+    });
+  </script>
+
+</body>
+</html>

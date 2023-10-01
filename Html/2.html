@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Css/gallery.css">
+</head>
+<body dir="rtl" onclick="removeitem()">
+<div class="mainlightbox">
+     <img src="/img/4.jpg"  width="20%"  onclick="lightboxfunction(this)" alt="img">
+    <img src="/img/2.jpg" width="20%"  onclick="lightboxfunction(this)"  alt="img"> 
+    <img src="/img/3.jpg"  width="20%"  onclick="lightboxfunction(this)"  alt="img">
+    <img src="/img/6.jpg" width="20%"  onclick="lightboxfunction(this)"  alt="img">
+ 
+</div>
+ <button class="hide">hide</button>
+ <button class="show">show</button>
+<p class="test">test mohammad</p>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+<script>
+var lightbox =$("<div id='greylightbox'></div>");
+var image=$("<img>");
+var caption=("<p></p>");
+
+$("body").append(lightbox);
+$("#greylightbox").append(image);
+$("#greylightbox").append(caption);
+
+$(".mainlightbox img").click(function(){
+var imglocation=$(this).attr("src");
+image.attr("src",imglocation);
+imagecaption=$(this).attr("alt");
+console.log(imagecaption);
+// caption.text=(attr("alt"));
+  $("#greylightbox").show();
+});
+
+
+  $(".hide").click(function(){
+    $(".test").hide("slow");
+  });
+
+  $(".show").click(function(){
+    $(".test").show("slow");
+  });
+  
+</script>
+
+
+
+<!-- <script>
+function removeitem(){
+  var box=document.getElementById("greylightbox");
+  box.onclick=function(){
+    box.remove();
+  }
+}
+    function lightboxfunction(param){ 
+   event.preventDefault();
+   var creatdivElement= document.createElement('div',);
+ document.body.appendChild(creatdivElement);
+creatdivElement.setAttribute('id','greylightbox');
+creatdivElement.setAttribute('class',"grey")
+
+
+ var createimg=document.createElement('img');
+ creatdivElement.appendChild(createimg);
+var imglocatin=param.getAttribute('src');
+createimg.setAttribute('src',imglocatin);
+
+creatdivElement.onclick=function(){
+  creatdivElement.remove();
+}
+}
+
+function removeitem(){
+  var box=document.getElementById("greylightbox");
+  if(box){
+    box.remove();
+  }
+}
+
+
+</script> -->
+</body>
+</html>
